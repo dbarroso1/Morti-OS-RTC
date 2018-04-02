@@ -90,32 +90,85 @@ answersints2word = {w_i: w for w, w_i in answerswords2int.items()}
 for i in range(len(clean_answers)):
     clean_answers[i] += ' <EOS>'
     
-questions_to_int = []
+questions_into_int = []
 for question in clean_questions:
     ints = []
     for words in question.split():
-        if words not in questionswords2int:
+        if word not in questionswords2int:
             ints.append(questionswords2int['<OUT>'])
         else:
             ints.append(questionswords2int[word])
-        questions_into_int.append(ints)
+    questions_into_int.append(ints)   
+answers_into_int = [] 
 for answer in clean_answers:
     ints = []
     for words in answer.split():
-        if words not in answerswords2int:
+        if word not in answerswords2int:
             ints.append(answerswords2int['<OUT>'])
         else:
             ints.append(answerswords2int[word])
-        answers_into_int.append(ints)
+    answers_into_int.append(ints)
             
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+sorted_clean_question = []
+sorted_clean_answer = []
+for length in range(1,25 + 1):
+    for i in enumerate(questions_into_int):
+        if len(i[1]) == length:
+            sorted_clean_question.append(questions_into_int[i[0]])
+            sorted_clean_answer.append(answers_into_int[i[0]])
+                    
+def model_inputs():
+    inputs = tf.placeholder(tf.int32, [None, None], name = "input")
+    targets = tf.placeholder(tf.int32, [None, None], name = "target")
+    lr = tf.placeholder(tf.float32, name = "learning_rate")            
+    keep_prob = tf.placeholder(tf.float32, name = "keep_prob")    
+    return inputs, targets, lr, keep_prob
+
+def preprocess_targets(targets, word2int, batch_size):         
+    left_side = tf.fill([batch_size, 1], word2int['<SOS>'])
+    right_side = tf.strided_slice(target, [0,0], [batch_size, -1], [1,1])
+    preprocessed_targets = tf.concat([left_side, right_side], 1)
+    return preprocessed_targets
+            
+def encoder_rnn_layer(rnn_inputs, rnn_size, num_layers, keep_prob, sequence_length):
+    lstm = tf.contrib.rnn.BasicLSTMCell(rnn_size)  
+    lstm_dropout = tf.contrib.rnn.DropoutWrapper(lstm, input_keep_prob = keep_prob)
+    encoder_cell = tf.contrib.rnn.MultiRNNCell([lstm_droppout] * num_layers)
+    _, encoder_state = tf.nn.bidirectional_dynamic_rnn(cell_fw = encoder_cell,
+                                                       cell_bw = encoder_cell,
+                                                       sequence_length = sequence_length,
+                                                       inputs = rnn_inputs,
+                                                       dtype = tf.float32)
+    return encoder_state
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
