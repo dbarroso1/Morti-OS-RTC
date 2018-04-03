@@ -4,9 +4,15 @@ import re
 import time
  
 # Importing the dataset
+<<<<<<< HEAD
 lines = open('./corpus/movie_lines.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
 conversations = open('./corpus/movie_conversations.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
 
+=======
+lines = open('corpus/movie_lines.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
+conversations = open('corpus/movie_conversations.txt', encoding = 'utf-8', errors = 'ignore').read().split('\n')
+ 
+>>>>>>> 25b6e21dd55eb6aa7566a22cdc675356b4abb286
 # Creating a dictionary that maps each line and its id
 id2line = {}
 for line in lines:
