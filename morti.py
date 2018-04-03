@@ -378,7 +378,8 @@ for epoch in range(1, epochs + 1):
                                                                                                                                        batch_index,
                                                                                                                                        len(training_questions) // batch_size,
                                                                                                                                        total_training_loss_error / batch_index_check_training_loss,
-                                                                                                                                       int(batch_time * batch_index_check_training_loss)))
+           
+                                                                                                                            int(batch_time * batch_index_check_training_loss)))
             total_training_loss_error = 0
         if batch_index % batch_index_check_validation_loss == 0 and batch_index > 0:
             total_validation_loss_error = 0
