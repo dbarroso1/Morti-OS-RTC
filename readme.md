@@ -35,6 +35,35 @@ Each word in the Input Phrase is seperated from the whole, given a corresponding
 <th>Parts of Speech</th>
 <td>interjection</td>
 <td>Noun</td>
+  
+  
+  
+  
+  
+  # Morti-OS | Modus Operandai
+
+## What is Morti-OS
+
+&nbsp;&nbsp;&nbsp;Morti stands for Machine Operated Relationship Trained Input-Output System. Morti-OS is an Artificially Intelligent Companion, he was built for the purpose of exploring and researching the evolution of information and how its processed, in order to get a better understanding of how the human brain has evolved.
+
+## How will he work
+
+&nbsp;&nbsp;&nbsp;Morti is planned to be made up from multiple Lobes. These Lobes are modeled after the human brain and is split up into Four Parts: Frontal Lobe. Parietal Lobe, Temporal Lobe and Occipital Lobe. Each Lobe has multiple modules contained inside it. Modules act as different sections to Mortis Brain, one such module is the ETC (Emotionally Trained Communication) Module. this module is made up of other smaller components, that allow Morti to efectivly communicate though Web or Applicaiton Interface.
+
+### Planned Modules
+
+<table>
+<tr>
+    <th>Cerebrum</th>
+    <th>Cerebellum</th>
+    <th>Brainstem</th>
+</tr>
+<tr>
+    <td><p> It performs higher functions like interpreting touch, vision and hearing, as well as speech, reasoning, emotions, learning</p></td>
+    <td><p> Its function is to coordinate muscle movements, maintain posture, and balance.</p></td>
+    <td><p>It acts as a relay center connecting the cerebrum and cerebellum to the spinal cord. It performs many automatic functions such as breathing, heart rate, body temperature, wake and sleep cycles, digestion, sneezing, coughing, vomiting, and swallowing.</p> </td>
+</tr>
+</table>
 <td>Verb</td>
 <td>Noun</td>
 <td>Verb</td>
