@@ -10,7 +10,7 @@
 
 ---
 
-# Morti Live Simulation (LS) Module
+# Morti-OS: Live Simulation (LS) Module
 
 ## About Morti LS
 
@@ -53,7 +53,7 @@ Using the Unity Engine, Morti will have an environment that he can roam around, 
 
 ---
 
-## Morti-OS Relationship Trained Communication (RTC) Module
+# Morti-OS: Relationship Trained Communication (RTC) Module
 
 The RTC Module is used by Morti as its main method of communication with the user. The goal of the RTC Module is to process user inputs, and define the context of said input, while calculating an emotional value (1-10) to the expression given.
 
